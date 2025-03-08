@@ -1,26 +1,22 @@
 #include "HeroModelBase.h"
 
-HeroModelBase::HeroModelBase(std::string name){
+HeroModelBase::HeroModelBase(std::string name, int attr_num=18){
     m_name = name;
-    HP = AttributeValue();
-    MP = AttributeValue();
-    AD = AttributeValue();
-    AP = AttributeValue();
-    PD = AttributeValue();
-    MD = AttributeValue();
+    m_attr_num = attr_num;
+    m_attr_list = new AttributeValue[m_attr_num];
+}
 
-    MS = AttributeValue();
-    PPen = AttributeValue();
-    MPen = AttributeValue();
-    AS = AttributeValue();
-    CR = AttributeValue();
-    CD = AttributeValue();
-    LS = AttributeValue();
-    SV = AttributeValue();
-    CDR = AttributeValue();
-    AttackRange = "";
+void
+HeroModelBase::set_AttackRange(std::string AR){
+    m_AttackRange = AR;
+}
 
-    Tenacity = AttributeValue();
-    HReg = AttributeValue();
-    MReg = AttributeValue();
+std::string
+HeroModelBase::get_AttackRange(){
+    return m_AttackRange;
+}
+
+AttributeValue
+HeroModelBase::get_Attribute(int attr){
+    return m_attr_list[attr];
 }

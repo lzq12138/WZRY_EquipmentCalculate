@@ -4,32 +4,20 @@
 
 class HeroModelBase{
     public:
-    HeroModelBase(std::string name);
+    HeroModelBase(std::string name, int attr_num=18);
+        
+    void set_AttackRange(std::string AR);
+    std::string get_AttackRange();
 
-    AttributeValue HP;          // Health Point
-    AttributeValue MP;          // Magic Point
-    AttributeValue AD;          // Attack Damage
-    AttributeValue AP;          // Attack Power
-    AttributeValue PD;          // Physical Defense
-    AttributeValue MD;          // Magical Defense
-
-    AttributeValue MS;          // Movement Speed
-    AttributeValue PPen;        // Physical Penetration
-    AttributeValue MPen;        // Magical Penetration
-    AttributeValue AS;          // Attack Speed
-    AttributeValue CR;          // Critical Rate
-    AttributeValue CD;          // Critical Damage
-    AttributeValue LS;          // Life Steal
-    AttributeValue SV;          // Spell Vamp
-    AttributeValue CDR;         // Cooldown Reduction
-    std::string AttackRange;    // Attack Range
-
-    AttributeValue Tenacity;    // Tenacity
-    AttributeValue HReg;        // Health Regeneration
-    AttributeValue MReg;        // Magic Regeneration
+    AttributeValue get_Attribute(int attr);
 
     private:
-    std::string m_name;
 
+    std::string m_name;             // Hero Name
+
+    std::string m_AttackRange;      // Attack Range
+
+    AttributeValue * m_attr_list;   // Pointer to Attribute List
+    int m_attr_num;                 // Number of Attributes
 
 };
