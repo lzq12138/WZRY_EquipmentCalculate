@@ -46,3 +46,11 @@ void
 AttributeValue::set_persentageValue(double value){
     m_percentageValue = value;
 }
+
+void
+AttributeValue::set(std::string name="", double value1=0.0, double value2=0.0, double value3=0.0){
+    m_name = name;
+    m_value = value1;
+    m_extraValue = value2;
+    m_percentageValue = value3;
+}
