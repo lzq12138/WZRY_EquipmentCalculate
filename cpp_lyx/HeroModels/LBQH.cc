@@ -1,31 +1,29 @@
 #include "LBQH.h"
 
 LBQH::LBQH() : HeroModelBase("鲁班七号"){
-    HP.set_Value(3366);
-    MP.set_Value(440);
-    AD.set_Value(174);
-    AP.set_Value(0);
-    PD.set_Value(150);
-    PD.set_persentageValue(20);
-    MD.set_Value(75);
-    MD.set_persentageValue(11.1);
+    set_AttackRange("远程");
+    
+    get_Attribute(HP).set("生命值", 3366, 0, 0);
+    get_Attribute(MP).set("法力值", 440, 0, 0);
+    get_Attribute(AD).set("物理攻击", 174, 0, 0);
+    get_Attribute(AP).set("法术攻击", 0, 0, 0);
+    get_Attribute(PD).set("物理防御", 150, 0, 20);
+    get_Attribute(MD).set("法术防御", 75, 0, 11.1);
+    
+    get_Attribute(MS).set("移动速度", 370, 0, 0);
+    get_Attribute(PPen).set("物理穿透", 0, 0, 0);
+    get_Attribute(MPen).set("法术穿透", 0, 0, 0);
+    get_Attribute(AS).set("攻击速度", 0, 10, 0);
+    get_Attribute(CR).set("暴击率", 0, 0, 0);
+    get_Attribute(CD).set("暴击伤害", 0, 200, 0);
+    get_Attribute(LS).set("物理吸血", 0, 0, 0);
+    get_Attribute(SV).set("法术吸血", 0, 0, 0);
+    get_Attribute(CDR).set("冷却缩减", 0, 0, 0);
 
-    MS.set_Value(370);
-    PPen.set_Value(0);
-    PPen.set_persentageValue(0);
-    MPen.set_Value(0);
-    MPen.set_persentageValue(0);
-    AS.set_persentageValue(10);
-    CR.set_persentageValue(0);
-    CD.set_persentageValue(200);
-    LS.set_persentageValue(0);
-    SV.set_persentageValue(0);
-    CDR.set_persentageValue(0);
-    AttackRange = "远程";
+    get_Attribute(Tenacity).set("韧性", 0, 0, 0);
+    get_Attribute(HReg).set("生命回复", 42, 0, 0);
+    get_Attribute(MReg).set("法力回复", 15, 0, 0);
 
-    Tenacity.set_persentageValue(0);
-    HReg.set_Value(42);
-    MReg.set_Value(15);
 }
 
 
