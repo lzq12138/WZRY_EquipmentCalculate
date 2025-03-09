@@ -28,13 +28,21 @@ class AttributeValue{
     public:
     AttributeValue(std::string name="", double value1=0.0, double value2=0.0, double value3=0.0);
 
+    // Get name of attribute
     std::string get_name();
+    // Set name of attribute
     void set_name(std::string name);
+    // Get value of attribute
     double get_Value();
+    // Set value of attribute
     void set_Value(double value);
+    // Get extra value of attribute
     double get_extraValue();
+    // Set extra value of attribute
     void set_extraValue(double value);
+    // Get percentage value of attribute
     double get_percentageValue();
+    // Set percentage value of attribute
     void set_persentageValue(double value);
 
     // Set all values
