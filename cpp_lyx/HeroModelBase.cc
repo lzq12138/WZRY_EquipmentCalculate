@@ -6,6 +6,10 @@ HeroModelBase::HeroModelBase(std::string name, int attr_num=18){
     m_attr_list = new AttributeValue[m_attr_num];
 }
 
+HeroModelBase::~HeroModelBase(){
+    delete m_attr_list;
+}
+
 void
 HeroModelBase::set_name(std::string name){
     m_name = name;

@@ -4,6 +4,8 @@
 class EquipmentModelBase{
     public:
         EquipmentModelBase(std::string name, int attr_num);
+        ~EquipmentModelBase();
+
 
         // get Attribute by index
         AttributeValue get_Attribute(int attr);

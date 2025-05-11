@@ -5,6 +5,8 @@
 class HeroModelBase{
     public:
     HeroModelBase(std::string name, int attr_num=18);
+    ~HeroModelBase();
+
 
     // Set Hero Name
     void set_name(std::string name);

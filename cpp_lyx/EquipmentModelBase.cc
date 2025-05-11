@@ -6,6 +6,10 @@ EquipmentModelBase::EquipmentModelBase(std::string name, int attr_num){
     attr_list = new AttributeValue[m_attr_num];
 }
 
+EquipmentModelBase::~EquipmentModelBase(){
+    delete attr_list;
+}
+
 AttributeValue
 EquipmentModelBase::get_Attribute(int attr){
     std::string attr_name = "";
