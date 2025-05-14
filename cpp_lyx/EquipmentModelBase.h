@@ -17,5 +17,6 @@ class EquipmentModelBase{
     private:
         std::string m_name;         // Equipment Name
         AttributeValue * attr_list; // Pointer to Attribute List
-        int m_attr_num;               // Number of Attributes
+        int m_attr_num;             // Number of Attributes
+        int m_price;                // equipment price
 };
