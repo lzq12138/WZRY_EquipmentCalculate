@@ -1,7 +1,8 @@
-#include <string>
-
 #ifndef AttributeValue_H
 #define AttributeValue_H
+
+#include <string>
+
 #define HP 0            // Health Point
 #define MP 1            // Magic Point
 #define AD 2            // Attack Damage
@@ -20,7 +21,7 @@
 #define Tenacity 15     // Tenacity
 #define HReg 16         // Health Regeneration
 #define MReg 17         // Magic Regeneration
-#endif
+#define N_ATTR 18       // number of attributes
 
 // Class for one attribute
 class AttributeValue{
@@ -55,3 +56,8 @@ class AttributeValue{
     double m_percentageValue;   // percentage value
 
 };
+
+// get name from attribute index
+std::string name(int idx);
+
+#endif
