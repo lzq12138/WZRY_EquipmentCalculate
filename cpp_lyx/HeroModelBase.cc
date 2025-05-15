@@ -1,6 +1,6 @@
 #include "HeroModelBase.h"
 
-HeroModelBase::HeroModelBase(std::string name, int attr_num=18){
+HeroModelBase::HeroModelBase(std::string name, int attr_num=N_ATTR){
     m_name = name;
     m_attr_num = attr_num;
     m_attr_list = new AttributeValue[m_attr_num];
@@ -43,4 +43,9 @@ HeroModelBase::get_Attribute_byname(std::string attr_name){
         }
     }
     throw std::invalid_argument("Attribute not found");
+}
+
+int
+HeroModelBase::get_NAttributes(){
+    return m_attr_num;
 }

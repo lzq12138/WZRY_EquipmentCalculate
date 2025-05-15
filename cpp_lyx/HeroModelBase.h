@@ -1,3 +1,6 @@
+#ifndef HeroModelBase_H
+#define HeroModelBase_H
+
 #include <string>
 
 #include "AttributeValue.h"
@@ -24,6 +27,9 @@ class HeroModelBase{
     // get Attribute by name
     AttributeValue get_Attribute_byname(std::string attr_name);
 
+    // get numbert of attributes
+    int get_NAttributes();
+
     private:
 
     std::string m_name;             // Hero Name
@@ -34,3 +40,5 @@ class HeroModelBase{
     int m_attr_num;                 // Number of Attributes
 
 };
+
+#endif
