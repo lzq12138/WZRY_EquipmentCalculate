@@ -22,6 +22,6 @@
 #define HReg_FACTOR 4.67       // Health Regeneration factor
 #define MReg_FACTOR 13         // Magic Regeneration factor
 
-double attribute_score(int price, double attribute);
+double attribute_score_calculation(int price, double price_factor, double attribute);
 
 #endif  
