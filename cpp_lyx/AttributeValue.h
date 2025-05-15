@@ -58,6 +58,9 @@ class AttributeValue{
 };
 
 // get name from attribute index
-std::string name(int idx);
+std::string idx2name(int idx);
+
+// get attribute index from name
+int name2idx(std::string name);
 
 #endif

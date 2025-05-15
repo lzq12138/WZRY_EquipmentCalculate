@@ -59,6 +59,15 @@ AttributeValue::set(std::string name="", double value1=0.0, double value2=0.0, d
 static std::string attribute_name[N_ATTR] = {"生命值", "法力值", "物理攻击", "法术攻击", "物理防御", "法术防御", "移动速度", "物理穿透", "法术穿透", "攻击速度", "暴击率", "暴击伤害", "物理吸血", "法术吸血", "冷却缩减", "韧性", "生命回复", "法力回复"};
 
 std::string 
-name(int idx){
+idx2name(int idx){
     return attribute_name[idx];
+}
+
+int
+name2idx(std::string name){
+    for(int i = 0; i < N_ATTR; i++){
+        if(attribute_name[i] == name){
+            return i;
+        }
+    }
 }
