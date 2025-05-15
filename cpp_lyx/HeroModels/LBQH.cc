@@ -22,8 +22,8 @@ LBQH::LBQH() : HeroModelBase("鲁班七号"){
                                     {42, 0, 0},
                                     {15, 0, 0}};
 
-    for(int i = 0; i <= N_ATTR; i++){
-        get_Attribute(i).set(name(i), attributes[i][0], attributes[i][1], attributes[i][2]);
+    for(int i = 0; i < N_ATTR; i++){
+        get_Attribute(i).set(idx2name(i), attributes[i][0], attributes[i][1], attributes[i][2]);
     }
 
     // get_Attribute(HP).set("生命值", 3366, 0, 0);
