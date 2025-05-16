@@ -10,22 +10,24 @@ class HeroModelBase{
     HeroModelBase(std::string name, int attr_num=18);
     ~HeroModelBase();
 
-
-    // Set Hero Name
-    void set_name(std::string name);
     // Get Hero Name
     std::string get_name();
+    // Set Hero Name
+    void set_name(std::string name);
     
-    // Set Attack Range
-    void set_AttackRange(std::string AR);
     // Get Attack Range
     std::string get_AttackRange();
+    // Set Attack Range
+    void set_AttackRange(std::string AR);
 
     // get Attribute by index
     AttributeValue get_Attribute(int attr);
 
     // get Attribute by name
     AttributeValue get_Attribute_byname(std::string attr_name);
+
+    // Set all Attributes
+    void set_Attributes(double (&attrs)[N_ATTR][3]);
 
     // get numbert of attributes
     int get_NAttributes();

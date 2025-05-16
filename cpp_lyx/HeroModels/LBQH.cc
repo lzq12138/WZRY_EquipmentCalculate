@@ -22,9 +22,11 @@ LBQH::LBQH() : HeroModelBase("鲁班七号"){
                                     {42, 0, 0},         // 生命回复
                                     {15, 0, 0}};        // 法力回复
 
-    for(int i = 0; i < N_ATTR; i++){
-        get_Attribute(i).set(idx2name(i), attributes[i][0], attributes[i][1], attributes[i][2]);
-    }
+    set_Attributes(attributes);
+
+    // for(int i = 0; i < N_ATTR; i++){
+    //     get_Attribute(i).set(idx2name(i), attributes[i][0], attributes[i][1], attributes[i][2]);
+    // }
 }
 
 
