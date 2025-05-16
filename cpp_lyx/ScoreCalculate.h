@@ -3,6 +3,9 @@
 
 #include <math.h>
 
+#include "AttributeValue.h"
+
+// base attribute factor
 #define HP_FACTOR 1.0          // Health Point factor
 #define MP_FACTOR 0.95         // Magic Point factor
 #define AD_FACTOR 12.0         // Attack Damage factor
@@ -23,5 +26,8 @@
 #define MReg_FACTOR 13         // Magic Regeneration factor
 
 double attribute_score_calculation(int price, double price_factor, double attribute);
+double attribute_score(AttributeValue attr, int price);
+
+double base_factor_from_idx(int idx);
 
 #endif  
