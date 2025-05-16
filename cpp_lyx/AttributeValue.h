@@ -34,9 +34,9 @@ class AttributeValue{
     // Set name of attribute
     void set_name(std::string name);
     // Get value of attribute
-    double get_Value();
+    double get_baseValue();
     // Set value of attribute
-    void set_Value(double value);
+    void set_baseValue(double value);
     // Get extra value of attribute
     double get_extraValue();
     // Set extra value of attribute
@@ -51,7 +51,7 @@ class AttributeValue{
 
     private:
     std::string m_name;         // name of atteibute
-    double m_value;             // basic value
+    double m_baseValue;             // basic value
     double m_extraValue;        // extra value
     double m_percentageValue;   // percentage value
 

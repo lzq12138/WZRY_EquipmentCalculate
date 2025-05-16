@@ -2,7 +2,7 @@
 
 AttributeValue::AttributeValue(std::string name="", double value1=0.0, double value2=0.0, double value3=0.0){
     m_name = name;
-    m_value = value1;
+    m_baseValue = value1;
     m_extraValue = value2;
     m_percentageValue = value3;
 }
@@ -18,13 +18,13 @@ AttributeValue::set_name(std::string name){
 }
 
 double
-AttributeValue::get_Value(){
-    return m_value;
+AttributeValue::get_baseValue(){
+    return m_baseValue;
 }
 
 void
-AttributeValue::set_Value(double value){
-    m_value = value;
+AttributeValue::set_baseValue(double value){
+    m_baseValue = value;
 }
 
 double
@@ -50,7 +50,7 @@ AttributeValue::set_persentageValue(double value){
 void
 AttributeValue::set(std::string name="", double value1=0.0, double value2=0.0, double value3=0.0){
     m_name = name;
-    m_value = value1;
+    m_baseValue = value1;
     m_extraValue = value2;
     m_percentageValue = value3;
 }
