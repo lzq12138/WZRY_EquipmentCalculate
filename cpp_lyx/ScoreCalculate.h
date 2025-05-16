@@ -15,19 +15,41 @@
 #define MS_FACTOR 8.33         // Movement Speed factor
 #define PPen_FACTOR 0.0        // Physical Penetration factor
 #define MPen_FACTOR 0.0        // Magical Penetration factor
-#define AS_FACTOR 29.0         // Attack Speed factor
-#define CR_FACTOR 35.0         // Critical Rate factor
+#define AS_FACTOR 0.0          // Attack Speed factor
+#define CR_FACTOR 0.0          // Critical Rate factor
 #define CD_FACTOR 0.0          // Critical Damage factor
-#define LS_FACTOR 36.25        // Life Steal factor
+#define LS_FACTOR 0.0          // Life Steal factor
 #define SV_FACTOR 0.0          // Spell Vamp factor
 #define CDR_FACTOR 0.0         // Cooldown Reduction factor
 #define Tenacity_FACTOR 0.0    // Tenacity factor
 #define HReg_FACTOR 4.67       // Health Regeneration factor
 #define MReg_FACTOR 13         // Magic Regeneration factor
 
-double attribute_score_calculation(int price, double price_factor, double attribute);
-double attribute_score(AttributeValue attr, int price);
+// percentage attribute factor
+#define HP_FACTOR2 0.0         // Health Point factor
+#define MP_FACTOR2 0.0         // Magic Point factor
+#define AD_FACTOR2 0.0         // Attack Damage factor
+#define AP_FACTOR2 0.0         // Attack Power factor
+#define PD_FACTOR2 0.0         // Physical Defense factor
+#define MD_FACTOR2 0.0         // Magical Defense factor
+#define MS_FACTOR2 0.0         // Movement Speed factor
+#define PPen_FACTOR2 0.0       // Physical Penetration factor
+#define MPen_FACTOR2 0.0       // Magical Penetration factor
+#define AS_FACTOR2 29.0        // Attack Speed factor
+#define CR_FACTOR2 35.0        // Critical Rate factor
+#define CD_FACTOR2 0.0         // Critical Damage factor
+#define LS_FACTOR2 36.25       // Life Steal factor
+#define SV_FACTOR2 0.0         // Spell Vamp factor
+#define CDR_FACTOR2 0.0        // Cooldown Reduction factor
+#define Tenacity_FACTOR2 0.0   // Tenacity factor
+#define HReg_FACTOR2 0.0       // Health Regeneration factor
+#define MReg_FACTOR2 0.0       // Magic Regeneration factor
+
+double equipment_score(int price, double attribute_scores[], int attribute_num);
+double attribute_score(AttributeValue attr);
 
 double base_factor_from_idx(int idx);
+double extra_factor_from_idx(int idx);
+
 
 #endif  
