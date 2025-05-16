@@ -17,7 +17,7 @@ class EquipmentModelBase{
         AttributeValue get_Attribute_byname(std::string attr_name);
         
         // set Attributes for this equipment
-        void set_Attributes(double (&attr)[][2]);
+        void set_Attributes(double (&attr)[][2], int (&idx)[]);
 
     private:
         std::string m_name;         // Equipment Name

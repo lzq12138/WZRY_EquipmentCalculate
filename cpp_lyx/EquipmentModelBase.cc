@@ -29,8 +29,8 @@ EquipmentModelBase::get_Attribute_byname(std::string attr_name){
 }
 
 void
-EquipmentModelBase::set_Attributes(double (&attr)[][2]){
+EquipmentModelBase::set_Attributes(double (&attr)[][2], int (&idx)[]){
     for(int i = 0; i < m_attr_num; i++){
-        m_attr_list[i].set(idx2name(i), 0.0, attr[i][0], attr[i][1]);       // no base value for equipment
+        m_attr_list[i].set(idx2name(idx[i]), 0.0, attr[i][0], attr[i][1]);       // no base value for equipment
     }
 }
