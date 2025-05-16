@@ -2,7 +2,7 @@
 #define EquipmentModelBase_H
 
 #include "AttributeValue.h"
-
+#include "ScoreCalculate.h"
 
 class EquipmentModelBase{
     public:
@@ -18,6 +18,9 @@ class EquipmentModelBase{
         
         // set Attributes for this equipment
         void set_Attributes(double attr[][2], int idx[]);
+
+        // calculate equipement score
+        double get_Score();
 
     private:
         std::string m_name;         // Equipment Name
