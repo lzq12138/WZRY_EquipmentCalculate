@@ -46,7 +46,7 @@ HeroModelBase::get_Attribute_byname(std::string attr_name){
 }
 
 void
-HeroModelBase::set_Attributes(double (&attrs)[N_ATTR][3]){
+HeroModelBase::set_Attributes(double attrs[N_ATTR][3]){
     for(int i = 0; i < N_ATTR; i++){
         m_attr_list[i].set(idx2name(i), attrs[i][0], attrs[i][1], attrs[i][2]);
     }

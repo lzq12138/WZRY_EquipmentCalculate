@@ -27,7 +27,7 @@ class HeroModelBase{
     AttributeValue get_Attribute_byname(std::string attr_name);
 
     // Set all Attributes
-    void set_Attributes(double (&attrs)[N_ATTR][3]);
+    void set_Attributes(double attrs[N_ATTR][3]);
 
     // get numbert of attributes
     int get_NAttributes();
