@@ -1,9 +1,12 @@
+#ifndef EquipmentModelBase_H
+#define EquipmentModelBase_H
+
 #include "AttributeValue.h"
 
 
 class EquipmentModelBase{
     public:
-        EquipmentModelBase(std::string name, int attr_num);
+        EquipmentModelBase(std::string name, int attr_num, int price);
         ~EquipmentModelBase();
 
 
@@ -13,10 +16,14 @@ class EquipmentModelBase{
         // get Attribute by name
         AttributeValue get_Attribute_byname(std::string attr_name);
         
+        // set Attributes for this equipment
+        void set_Attributes(double (&attr)[][2]);
 
     private:
         std::string m_name;         // Equipment Name
-        AttributeValue * attr_list; // Pointer to Attribute List
+        AttributeValue * m_attr_list; // Pointer to Attribute List
         int m_attr_num;             // Number of Attributes
         int m_price;                // equipment price
 };
+
+#endif
