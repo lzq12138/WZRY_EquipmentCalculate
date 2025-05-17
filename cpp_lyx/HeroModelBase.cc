@@ -1,13 +1,13 @@
 #include "HeroModelBase.h"
 
-HeroModelBase::HeroModelBase(std::string name, int attr_num=N_ATTR){
+HeroModelBase::HeroModelBase(std::string name, int attr_num){
     m_name = name;
     m_attr_num = attr_num;
     m_attr_list = new AttributeValue[m_attr_num];
 }
 
 HeroModelBase::~HeroModelBase(){
-    delete m_attr_list;
+    delete[] m_attr_list;
 }
 
 std::string

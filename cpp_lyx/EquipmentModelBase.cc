@@ -8,7 +8,7 @@ EquipmentModelBase::EquipmentModelBase(std::string name, int attr_num, int price
 }
 
 EquipmentModelBase::~EquipmentModelBase(){
-    delete m_attr_list;
+    delete[] m_attr_list;
 }
 
 AttributeValue
@@ -44,6 +44,6 @@ EquipmentModelBase::get_Score(){
     double score = 0.0;
     score = equipment_score(m_price, scores, m_attr_num);
 
-    delete scores;
+    delete[] scores;
     return score;
 }

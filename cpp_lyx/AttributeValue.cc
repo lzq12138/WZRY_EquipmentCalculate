@@ -1,6 +1,6 @@
 #include "AttributeValue.h"
 
-AttributeValue::AttributeValue(std::string name="", double value1=0.0, double value2=0.0, double value3=0.0){
+AttributeValue::AttributeValue(std::string name, double value1, double value2, double value3){
     m_name = name;
     m_baseValue = value1;
     m_extraValue = value2;
@@ -48,7 +48,7 @@ AttributeValue::set_persentageValue(double value){
 }
 
 void
-AttributeValue::set(std::string name="", double value1=0.0, double value2=0.0, double value3=0.0){
+AttributeValue::set(std::string name, double value1, double value2, double value3){
     m_name = name;
     m_baseValue = value1;
     m_extraValue = value2;
@@ -70,4 +70,5 @@ name2idx(std::string name){
             return i;
         }
     }
+    return -1;
 }

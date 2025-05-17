@@ -1,6 +1,8 @@
 #ifndef EquipmentModelBase_H
 #define EquipmentModelBase_H
 
+#include <stdexcept>
+
 #include "AttributeValue.h"
 #include "ScoreCalculate.h"
 

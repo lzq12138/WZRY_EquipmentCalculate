@@ -2,6 +2,7 @@
 #define HeroModelBase_H
 
 #include <string>
+#include <stdexcept>
 
 #include "AttributeValue.h"
 
