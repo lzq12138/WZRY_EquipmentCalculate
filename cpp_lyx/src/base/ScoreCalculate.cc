@@ -18,12 +18,8 @@ ScoreDetail::get_score(){
     return m_base_score + 1.0 - exp(get_price_score() / m_price_factor_scaler);
 }
 
-ScoreDetail equipment_score(int price, double attribute_scores[], int attribute_num){
-    double attributes_score = 0.0;
+ScoreDetail equipment_score(int price, double attributes_score){
     double passive_ability_score = 0.0;     // not implemented yet
-    for(int i = 0; i < attribute_num; i++){
-        attributes_score += attribute_scores[i];
-    }
     ScoreDetail score_detail(attributes_score, passive_ability_score, price);
     return score_detail;
 }

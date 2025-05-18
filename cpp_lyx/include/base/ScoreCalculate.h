@@ -63,7 +63,7 @@ class ScoreDetail{
     int m_price;
 };
 
-ScoreDetail equipment_score(int price, double attribute_scores[], int attribute_num);
+ScoreDetail equipment_score(int price, double attributes_score);
 double attribute_score(AttributeValue attr);
 
 double base_factor_from_idx(int idx);

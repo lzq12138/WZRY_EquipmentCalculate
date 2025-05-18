@@ -56,8 +56,12 @@ EquipmentModelBase::get_Score(){
     for(int i = 0; i < m_attr_num; i++){
         scores[i] = attribute_score(m_attr_list[i]);
     }
+    double attributes_score = 0.0;
+    for(int i = 0; i < m_attr_num; i++){
+        attributes_score += scores[i];
+    }
     double score = 0.0;
-    score = equipment_score(m_price, scores, m_attr_num).get_score();
+    score = equipment_score(m_price, attributes_score).get_score();
 
     delete[] scores;
     return score;
