@@ -1,4 +1,4 @@
-#include "EquipmentModelBase.h"
+#include "base/EquipmentModelBase.h"
 
 EquipmentModelBase::EquipmentModelBase(std::string name, int attr_num, int price){
     m_name = name;

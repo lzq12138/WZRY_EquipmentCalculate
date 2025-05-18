@@ -1,4 +1,4 @@
-#include "HeroModelBase.h"
+#include "base/HeroModelBase.h"
 
 HeroModelBase::HeroModelBase(std::string name, int attr_num){
     m_name = name;

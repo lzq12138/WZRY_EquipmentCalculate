@@ -4,7 +4,7 @@
 #include <string>
 #include <stdexcept>
 
-#include "AttributeValue.h"
+#include "base/AttributeValue.h"
 
 class HeroModelBase{
     public:

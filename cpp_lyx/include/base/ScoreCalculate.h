@@ -3,7 +3,7 @@
 
 #include <math.h>
 
-#include "AttributeValue.h"
+#include "base/AttributeValue.h"
 
 // base attribute factor
 #define HP_FACTOR 1.0          // Health Point factor

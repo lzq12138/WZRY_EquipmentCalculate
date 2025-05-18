@@ -3,8 +3,8 @@
 
 #include <stdexcept>
 
-#include "AttributeValue.h"
-#include "ScoreCalculate.h"
+#include "base/AttributeValue.h"
+#include "base/ScoreCalculate.h"
 
 class EquipmentModelBase{
     public:

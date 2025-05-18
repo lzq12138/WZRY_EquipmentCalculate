@@ -1,4 +1,4 @@
-#include "ScoreCalculate.h"
+#include "base/ScoreCalculate.h"
 
 double equipment_score(int price, double attribute_scores[], int attribute_num)
 {

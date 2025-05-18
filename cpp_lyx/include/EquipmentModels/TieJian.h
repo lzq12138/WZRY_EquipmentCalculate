@@ -1,7 +1,7 @@
 #ifndef TieJian_H
 #define TieJian_H
 
-#include "EquipmentModelBase.h"
+#include "base/EquipmentModelBase.h"
 
 class TieJian : public EquipmentModelBase{
     public:

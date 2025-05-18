@@ -1,4 +1,4 @@
-#include "TieJian.h"
+#include "EquipmentModels/TieJian.h"
 
 static const int attr_num = 1;
 

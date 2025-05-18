@@ -1,4 +1,4 @@
-#include "LBQH.h"
+#include "HeroModels/LBQH.h"
 
 LBQH::LBQH() : HeroModelBase("鲁班七号"){
     set_AttackRange("远程");
