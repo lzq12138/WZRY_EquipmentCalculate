@@ -7,7 +7,7 @@ double equipment_score(int price, double attribute_scores[], int attribute_num)
     for(int i = 0; i < attribute_num; i++){
         attributes_score += attribute_scores[i];
     }
-    return 10.0 + 1.0 - exp(price - attributes_score - passive_ability_score);
+    return 10.0 + 1.0 - exp((price - attributes_score - passive_ability_score) / 100.0);
 }
 
 double attribute_score(AttributeValue attr){
