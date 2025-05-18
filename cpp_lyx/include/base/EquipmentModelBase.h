@@ -21,9 +21,12 @@ class EquipmentModelBase{
 
     // get Attribute by name
     AttributeValue get_Attribute_byname(std::string attr_name);
-    
+
     // set Attributes for this equipment
     void set_Attributes(double attr[][2], int idx[]);
+
+    // get number of attributes
+    int get_NAttributes();
 
     // calculate equipement score
     double get_Score();

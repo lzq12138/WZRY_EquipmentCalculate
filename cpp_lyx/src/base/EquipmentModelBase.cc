@@ -45,6 +45,11 @@ EquipmentModelBase::set_Attributes(double attr[][2], int idx[]){
     }
 }
 
+int
+EquipmentModelBase::get_NAttributes(){
+    return m_attr_num;
+}
+
 double 
 EquipmentModelBase::get_Score(){
     double *scores = new double [m_attr_num];
