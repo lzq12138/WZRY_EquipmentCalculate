@@ -45,11 +45,25 @@
 #define HReg_FACTOR2 0.0       // Health Regeneration factor
 #define MReg_FACTOR2 0.0       // Magic Regeneration factor
 
-double equipment_score(int price, double attribute_scores[], int attribute_num);
+class ScoreDetail{
+    public:
+    ScoreDetail(double attributes_score, double passive_ability_score, int price);
+
+    // get score
+    double get_score();
+
+    private:
+    double m_attributes_score;
+    double m_passive_ability_score;
+    double m_price_factor_scaler = 100.0;
+    double m_base_score = 10.0;
+    int m_price;
+};
+
+ScoreDetail equipment_score(int price, double attribute_scores[], int attribute_num);
 double attribute_score(AttributeValue attr);
 
 double base_factor_from_idx(int idx);
 double extra_factor_from_idx(int idx);
-
 
 #endif  

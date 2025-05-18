@@ -1,13 +1,25 @@
 #include "base/ScoreCalculate.h"
 
-double equipment_score(int price, double attribute_scores[], int attribute_num)
-{
+
+ScoreDetail::ScoreDetail(double attributes_score, double passive_ability_score, int price){
+    m_attributes_score = attributes_score;
+    m_passive_ability_score = passive_ability_score;
+    m_price = price;
+}
+
+double
+ScoreDetail::get_score(){
+    return m_base_score + 1.0 - exp((m_price - m_attributes_score - m_passive_ability_score) / m_price_factor_scaler);
+}
+
+ScoreDetail equipment_score(int price, double attribute_scores[], int attribute_num){
     double attributes_score = 0.0;
     double passive_ability_score = 0.0;     // not implemented yet
     for(int i = 0; i < attribute_num; i++){
         attributes_score += attribute_scores[i];
     }
-    return 10.0 + 1.0 - exp((price - attributes_score - passive_ability_score) / 100.0);
+    ScoreDetail score_detail(attributes_score, passive_ability_score, price);
+    return score_detail;
 }
 
 double attribute_score(AttributeValue attr){
