@@ -7,7 +7,7 @@ double equipment_score(int price, double attribute_scores[], int attribute_num)
     for(int i = 0; i < attribute_num; i++){
         attributes_score += attribute_scores[i];
     }
-    return 1 - exp(price - attributes_score - passive_ability_score);
+    return 10.0 + 1.0 - exp(price - attributes_score - passive_ability_score);
 }
 
 double attribute_score(AttributeValue attr){
@@ -15,7 +15,7 @@ double attribute_score(AttributeValue attr){
     int idx = name2idx(name);
     double base_factor = base_factor_from_idx(idx);
     double base_value = attr.get_extraValue();      // only extra attribute should be calculate
-    double percentage_factor = extra_factor_from_idx(idx);                 // not include yet
+    double percentage_factor = extra_factor_from_idx(idx);
     double percentage_value = attr.get_percentageValue();
     return base_factor * base_value + percentage_factor * percentage_value;
 }
