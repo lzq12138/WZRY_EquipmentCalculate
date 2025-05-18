@@ -11,6 +11,16 @@ EquipmentModelBase::~EquipmentModelBase(){
     delete[] m_attr_list;
 }
 
+std::string
+EquipmentModelBase::get_name(){
+    return m_name;
+}
+
+void
+EquipmentModelBase::set_name(std::string name){
+    m_name = name;
+}
+
 AttributeValue
 EquipmentModelBase::get_Attribute(int idx){
     std::string attr_name = idx2name(idx);
