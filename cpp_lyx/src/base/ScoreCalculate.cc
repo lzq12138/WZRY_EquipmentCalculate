@@ -8,8 +8,14 @@ ScoreDetail::ScoreDetail(double attributes_score, double passive_ability_score, 
 }
 
 double
+ScoreDetail::get_price_score(){
+    return m_price - m_attributes_score - m_passive_ability_score;
+}
+
+
+double
 ScoreDetail::get_score(){
-    return m_base_score + 1.0 - exp((m_price - m_attributes_score - m_passive_ability_score) / m_price_factor_scaler);
+    return m_base_score + 1.0 - exp(get_price_score() / m_price_factor_scaler);
 }
 
 ScoreDetail equipment_score(int price, double attribute_scores[], int attribute_num){

@@ -49,6 +49,9 @@ class ScoreDetail{
     public:
     ScoreDetail(double attributes_score, double passive_ability_score, int price);
 
+    // get price score
+    double get_price_score();
+
     // get score
     double get_score();
 
