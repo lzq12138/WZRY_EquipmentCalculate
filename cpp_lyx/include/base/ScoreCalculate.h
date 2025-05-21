@@ -40,7 +40,7 @@
 #define CD_FACTOR2 0.0         // Critical Damage factor
 #define LS_FACTOR2 36.25       // Life Steal factor
 #define SV_FACTOR2 0.0         // Spell Vamp factor
-#define CDR_FACTOR2 0.0        // Cooldown Reduction factor
+#define CDR_FACTOR2 51.0        // Cooldown Reduction factor
 #define Tenacity_FACTOR2 0.0   // Tenacity factor
 #define HReg_FACTOR2 0.0       // Health Regeneration factor
 #define MReg_FACTOR2 0.0       // Magic Regeneration factor
@@ -65,6 +65,8 @@ class ScoreDetail{
 
 ScoreDetail equipment_score(int price, double attributes_score);
 double attribute_score(AttributeValue attr);
+double attribute_attempt_score(AttributeValue attr, double attempt_base_factor, double attempt_extra_factor);
+
 
 double base_factor_from_idx(int idx);
 double extra_factor_from_idx(int idx);
