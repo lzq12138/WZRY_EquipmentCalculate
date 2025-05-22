@@ -1,5 +1,5 @@
-#ifndef GongJi_LV1_H
-#define GongJi_LV1_H
+#ifndef GongJi_LV2_H
+#define GongJi_LV2_H
 
 #include "base/EquipmentModelBase.h"
 
