@@ -1,6 +1,6 @@
 #include "EquipmentModels/GongJi_LV1.h"
 
-TieJian::TieJian() : EquipmentModelBase("铁剑", 1, 300){\
+TieJian::TieJian() : EquipmentModelBase("铁剑", 1, 300){
     int attr_num = get_NAttributes();
     double attributes[attr_num][2] = {{25, 0}};
     int idx[attr_num] = {AD};
