@@ -32,7 +32,7 @@
 #define AP_FACTOR2 0.0         // Attack Power factor
 #define PD_FACTOR2 0.0         // Physical Defense factor
 #define MD_FACTOR2 0.0         // Magical Defense factor
-#define MS_FACTOR2 0.0         // Movement Speed factor
+#define MS_FACTOR2 5.6         // Movement Speed factor
 #define PPen_FACTOR2 0.0       // Physical Penetration factor
 #define MPen_FACTOR2 0.0       // Magical Penetration factor
 #define AS_FACTOR2 29.0        // Attack Speed factor
