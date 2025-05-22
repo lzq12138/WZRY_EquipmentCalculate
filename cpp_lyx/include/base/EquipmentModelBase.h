@@ -22,6 +22,9 @@ class EquipmentModelBase{
     // get Attribute by name
     AttributeValue get_Attribute_byname(std::string attr_name);
 
+    // get attribute from list (list index), used for traverse
+    AttributeValue get_Attribute_from_list(int idx);
+
     // set Attributes for this equipment
     void set_Attributes(double attr[][2], int idx[]);
 

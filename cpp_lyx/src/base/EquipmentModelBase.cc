@@ -38,6 +38,17 @@ EquipmentModelBase::get_Attribute_byname(std::string attr_name){
     throw std::invalid_argument("Attribute not found");
 }
 
+AttributeValue
+EquipmentModelBase::get_Attribute_from_list(int idx){
+    if(idx >= m_attr_num){
+        throw std::invalid_argument("Attribute index out of range");
+    }
+    else{
+        return m_attr_list[idx];
+    }
+}
+
+
 void
 EquipmentModelBase::set_Attributes(double attr[][2], int idx[]){
     for(int i = 0; i < m_attr_num; i++){
