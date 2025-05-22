@@ -69,6 +69,6 @@ double attribute_attempt_score(AttributeValue attr, double attempt_base_factor, 
 
 
 double base_factor_from_idx(int idx);
-double extra_factor_from_idx(int idx);
+double percentage_factor_from_idx(int idx);
 
 #endif  
